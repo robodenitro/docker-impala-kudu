@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<?xml-stylesheet type="text/xsl" href="configuration.xsl"?>
+
+<configuration>
+	<property>
+		<name>fs.default.name</name>
+		<value>hdfs://0.0.0.0:8020</value>
+		<description>The name of the default file system. See docker-entrypoint.sh</description>
+	</property>
+
+</configuration>
