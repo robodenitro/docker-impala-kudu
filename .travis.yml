@@ -1,0 +1,10 @@
+sudo: required
+services:
+    - docker
+after_success:
+  - if [ "$TRAVIS_BRANCH" == "master" ]; then
+    docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+    docker build -t $IMAGE_NAME . ;
+    docker tag $IMAGE_NAME:latest "$REMOTE_IMAGE_URL:latest";
+    docker push "$REMOTE_IMAGE_URL:latest";
+    fi

@@ -11,7 +11,7 @@ docker run -d -p 8050:8050 -p 8051:8051 -p 21050:21050 -p 25000:25000 -p 25010:2
 Exposed ports are:
 * 8050 Kudu: TabletServer HTTP (Web UI)
 * 8051 Kudu: Master HTTP (Web UI)
-* 51050 Impala: Daemon RPC
+* 21050 Impala: Daemon RPC
 * 25000 Impala: Daemon HTTP (Web UI)
 * 25010 StateStore HTTP (Web UI)
 * 25020 Catalog HTTP (Web UI)
