@@ -12,3 +12,4 @@ install:
 script:
    - if [ "$TRAVIS_BRANCH" == "master" ]; then
      make release
+     fi
