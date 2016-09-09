@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/andreysabitov/docker-impala-kudu.svg?branch=master)](https://travis-ci.org/andreysabitov/docker-impala-kudu)
+
 # Kudu/Impala container from CDH5 stack
 
 This is a standalone container which has Apache Kudu and Impala installed with dependencies (HDFS, Hive etc).

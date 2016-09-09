@@ -36,7 +36,7 @@ RUN echo "Configuring Hadoop, Hive and Impala" \
 
 VOLUME /var/lib/hadoop-hdfs /var/lib/hive /var/lib/impala /var/lib/kudu
 
-EXPOSE 8050 8051 21050 25000 25010 25020 50070 50075
+EXPOSE 7050 7051 8020 8050 8051 9083 15000 15001 15002 21000 21050 22000 23000 23020 24000 25000 25010 26000 28000 50010 25020 50070 50075
 
 COPY ./docker-entrypoint.sh /usr/local/bin/
 
