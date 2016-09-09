@@ -4,12 +4,10 @@ sudo: required
 services:
   - docker
 
-install: 
-  - if [ "$TRAVIS_BRANCH" == "master" ]; then
-    docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
-    fi
+install: true
 
 script:
    - if [ "$TRAVIS_BRANCH" == "master" ]; then
-     make release
+     docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
+     make release;
      fi
