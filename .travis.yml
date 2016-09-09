@@ -1,10 +1,9 @@
-language: go
-elixir:
-  - 1.7
+dist: trusty
 sudo: required
 services:
-    - docker
-after_success:
+  - docker
+
+install: 
   - if [ "$TRAVIS_BRANCH" == "master" ]; then
     docker login -e="$DOCKER_EMAIL" -u="$DOCKER_USERNAME" -p="$DOCKER_PASSWORD";
     docker build -t $IMAGE_NAME . ;
