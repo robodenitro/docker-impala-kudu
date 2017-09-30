@@ -13,12 +13,13 @@ RUN curl -o archive.key https://archive.cloudera.com/cdh5/ubuntu/trusty/amd64/cd
 
 RUN apt-get install -y hadoop-hdfs-namenode \
     hadoop-hdfs-datanode hive hive-metastore \
-    impala-kudu impala-kudu-catalog impala-kudu-server \
-    impala-kudu-state-store impala-kudu-shell \
+    impala impala-catalog impala-server \
+    impala-state-store impala-shell \
     kudu-master kudu-tserver \
     rsyslog
 
 COPY ./etc /etc/cdh/
+COPY ./default/impala /etc/default/impala
 
 RUN echo "Configuring Hadoop, Hive and Impala" \
  && ln -sf /etc/cdh/core-site.xml /etc/hadoop/conf/  \
